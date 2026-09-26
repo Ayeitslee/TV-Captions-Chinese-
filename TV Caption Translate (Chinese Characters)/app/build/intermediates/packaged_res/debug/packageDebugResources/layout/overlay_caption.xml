@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#CC000000"
+    android:padding="16dp"
+    android:minWidth="200dp">
+
+    <!-- Recognized English caption text (from OCR of YouTube's own captions). -->
+    <TextView
+        android:id="@+id/overlayOriginal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Chinese translation. -->
+    <TextView
+        android:id="@+id/overlayChinese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4FC3F7"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Pinyin under the Chinese line. -->
+    <TextView
+        android:id="@+id/overlayPinyin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:layout_marginBottom="2dp" />
+
+    <!-- Jyutping under the pinyin line. -->
+    <TextView
+        android:id="@+id/overlayJyutping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#888888"
+        android:textSize="14sp" />
+
+</LinearLayout>

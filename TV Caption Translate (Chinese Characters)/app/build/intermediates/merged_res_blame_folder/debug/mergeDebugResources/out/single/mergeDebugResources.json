@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.aiviewer.tvcaption.app-debug-22:/layout_overlay_caption.xml.flat",
+        "source": "com.aiviewer.tvcaption.app-main-24:/layout/overlay_caption.xml"
+    },
+    {
+        "merged": "com.aiviewer.tvcaption.app-debug-22:/layout_activity_settings.xml.flat",
+        "source": "com.aiviewer.tvcaption.app-main-24:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.aiviewer.tvcaption.app-debug-22:/layout_activity_main.xml.flat",
+        "source": "com.aiviewer.tvcaption.app-main-24:/layout/activity_main.xml"
+    }
+]

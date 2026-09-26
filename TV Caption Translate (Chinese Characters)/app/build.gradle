@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.aiviewer.tvcaption'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.aiviewer.tvcaption"
+        // minSdk 26: MediaProjection-based screen capture on Android TV is
+        // reliable from Oreo onward; TYPE_APPLICATION_OVERLAY also needs 26+.
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "0.1.0"
+
+        ndk {
+            // This Chromecast reports armeabi-v7a only (confirmed via
+            // `adb shell getprop ro.product.cpu.abilist`) — it's 32-bit ARM,
+            // not 64-bit, despite being a "4K" model.
+            abiFilters "armeabi-v7a"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    // Dictionary JSON files are large (jyutping ~4.5MB); keep them uncompressed
+    // in the APK so they can be memory-mapped / streamed instead of inflated.
+    aaptOptions {
+        noCompress "json"
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core:1.12.0'
+
+    // On-device OCR (no network, no API key, free).
+    // Latin recognizer reads YouTube's English auto-captions.
+    implementation 'com.google.mlkit:text-recognition:16.0.0'
+
+    // On-device translation (no network after model download, free).
+    implementation 'com.google.mlkit:translate:17.0.2'
+}

@@ -1,0 +1,26 @@
+com.aiviewer.tvcaption
+id buttonResetCrop
+id buttonSaveCrop
+id captionSettingsButton
+id fieldCropBottom
+id fieldCropLeft
+id fieldCropRight
+id fieldCropTop
+id overlayChinese
+id overlayJyutping
+id overlayOriginal
+id overlayPinyin
+id settingsButton
+id startButton
+id statusText
+id stopButton
+id switchDebugLog
+id switchShowChinese
+id switchShowJyutping
+id switchShowOriginal
+id switchShowPinyin
+id switchTranslationEnabled
+layout activity_main
+layout activity_settings
+layout overlay_caption
+style AppTheme
